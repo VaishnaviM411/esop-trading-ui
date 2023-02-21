@@ -23,8 +23,42 @@ async function handleResponse(response) {
     }
 }
 
-function displayHistory(response) {
+function displayHistory(data) {
+    const orderHistory = document.getElementById("orderHistoryTable")
+    data.forEach(order => {
+        const row = createOrderRow(order)
+        orderHistory.appendChild(row)
+    });
+}
 
+function createOrderRow(order) {
+    const row = document.createElement("tr")
+
+    const orderId = document.createElement("td")
+    orderId.innerText = order["orderId"]
+    row.appendChild(orderId)
+
+    const type = document.createElement("td")
+    type.innerText = order["type"]
+    row.appendChild(type)
+
+    const quantity = document.createElement("td")
+    quantity.innerText = order["quantity"]
+    row.appendChild(quantity)
+
+    const price = document.createElement("td")
+    price.innerText = order["price"]
+    row.appendChild(price)
+
+    const esopType = document.createElement("td")
+    esopType.innerText = order["esopType"]=="PERFORMANCE" ? String.fromCodePoint(0x2B50) : ""
+    row.appendChild(esopType)
+
+    const status = document.createElement("td")
+    status.innerText = order["status"]
+    row.appendChild(status)
+
+    return row
 }
 
 
