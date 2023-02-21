@@ -1,0 +1,42 @@
+:root {
+    --border-color: rgb(135, 100, 183);
+}
+
+form {
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+select, option, input {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+
+}
+
+label {
+    margin-top: 12px;
+}
+
+#esopTypeDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#submit {
+    margin-top: 10px;
+}
+
+#result {
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+#error{
+    margin: 1em;
+    color: rgb(187, 60, 60);
+}
+
