@@ -24,13 +24,18 @@ async function handleResponse(response) {
     const data = await response.json()
 
     if (response.status == 200) {
-        alert("Order placed successfully!")
+        successAlert(data)
         clearCreateOrderForm()
         selectEsopType()
     } else {
         errors = data["error"]
         displayErrors(errors)
     }
+}
+
+function successAlert(data) {
+    const orderDetails = createOrderDetails(data)
+    alert("Order placed successfully!" + "\n" + orderDetails)
 }
 
 function clearResultDiv() {
@@ -48,38 +53,18 @@ function displayErrors(errors) {
     errorCard.style.display = "flex"
 }
 
-function createOrderCard(data) {
-    const order = document.getElementById('result')
-    const orderCard = document.createElement("div")
-
-    const orderIdEle = document.createElement("p")
-    orderIdEle.innerText = `OrderId: ${data.orderId}`
-
-    const quantityEle = document.createElement("p")
-    quantityEle.innerText = `Quantity: ${data.quantity}`
-
-    const priceEle = document.createElement("p")
-    priceEle.innerText = `Price: ${data.price}`
-
-    const orderTypeEle = document.createElement("p")
-    orderTypeEle.innerText = `Type: ${data.type}`
-
-    const orderStatusEle = document.createElement("p")
-    orderStatusEle.innerText = `Status: ${data.status}`
-
-    orderCard.appendChild(orderTypeEle)
-    orderCard.appendChild(quantityEle)
-    orderCard.appendChild(priceEle)
+function createOrderDetails(data) {
+    const orderDetails = `OrderId: ${data.orderId}\n`
+        + `Quantity: ${data.quantity}\n`
+        + `Price: ${data.price}\n`
+        + `Type: ${data.type}\n`
+        + `Status: ${data.status}\n`
 
     if (data.type == 'SELL') {
-        const esopTypeEle = document.createElement("p")
-        esopTypeEle.innerText = `ESOP type: ${data.esopType}`
-        orderCard.appendChild(esopTypeEle)
+        orderDetails += `ESOP type: ${data.esopType}`
     }
 
-    orderCard.appendChild(orderStatusEle)
-
-    order.appendChild(orderCard)
+    return orderDetails
 }
 
 function getBody() {
