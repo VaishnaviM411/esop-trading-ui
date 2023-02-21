@@ -1,0 +1,24 @@
+:root {
+    --header-violet: rgb(135, 100, 183);
+    --text-white: white
+}
+
+header {
+    width: 100%;
+    font-size: 20px;
+    padding: 2em 2em;
+    padding-left: 5em;
+    padding-right: 2em;
+    background-color: var(--header-violet);
+    color: var(--text-white);
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(29, 29, 29);
+}
