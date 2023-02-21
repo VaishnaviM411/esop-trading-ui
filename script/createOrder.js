@@ -39,7 +39,7 @@ function displayErrors(errors) {
     const errorCard = document.getElementById("result")
     for (let i = 0; i < errors.length; i++) {
         const errorMessage = document.createElement("li")
-        errorMessage.setAttribute("id","error")
+        errorMessage.setAttribute("id", "error")
         errorMessage.innerText = errors[i]
         errorCard.append(errorMessage)
     }
@@ -69,7 +69,7 @@ function createOrderCard(data) {
     orderCard.appendChild(quantityEle)
     orderCard.appendChild(priceEle)
 
-    if(data.type == 'SELL'){
+    if (data.type == 'SELL') {
         const esopTypeEle = document.createElement("p")
         esopTypeEle.innerText = `ESOP type: ${data.esopType}`
         orderCard.appendChild(esopTypeEle)
