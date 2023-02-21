@@ -33,6 +33,7 @@ function displayHistory(data) {
 
 function createOrderRow(order) {
     const row = document.createElement("tr")
+    row.addEventListener("click", showModal);
 
     const orderId = document.createElement("td")
     orderId.innerText = order["orderId"]
@@ -62,3 +63,34 @@ function createOrderRow(order) {
 }
 
 
+function showModal(event){
+    console.log("show modal called");
+    const modalEle = document.createElement("div")
+    modalEle.setAttribute("class", "modal")
+    const modalContentEle = document.createElement("div")
+    modalContentEle.setAttribute("class","modal-content")
+    const closeBtn = document.createElement("span")
+    
+    closeBtn.innerHTML = "&times;"
+    closeBtn.setAttribute("class", "close")
+    modalContentEle.appendChild(closeBtn)
+
+    const content = document.createElement("div")
+    content.innerText = "some text"
+
+    modalContentEle.appendChild(content)
+
+    modalEle.appendChild(modalContentEle)
+    document.body.appendChild(modalEle)
+
+    closeBtn.onclick = function() {
+        modalEle.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modalEle) {
+          modal.style.display = "none";
+        }
+      }
+}
+  
+  

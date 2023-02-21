@@ -1,20 +1,32 @@
 :root {
     --border-color: rgb(135, 100, 183);
+    --btn-color: rgb(135, 100, 183);
+    --btn-text-color: white
 }
 
 form {
-    margin-top: 130px;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--border-color);
     padding: 8px;
     border-radius: 10px;
+    width: 50vw;
 }
 
-select, option, input {
+option, input {
     border-radius: 5px;
     border: 1px solid var(--border-color);
+    padding: 1em;
+}
 
+select {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    padding: 1em;
+}
+
+input[type="submit"] {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
 }
 
 label {
