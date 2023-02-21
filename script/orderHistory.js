@@ -56,7 +56,12 @@ function createOrderRow(order) {
     row.appendChild(esopType)
 
     const status = document.createElement("td")
-    status.innerText = order["status"]
+    switch(order["status"]) {
+        case "COMPLETE": status.innerText = String.fromCodePoint(0x2705);break;
+        case "PARTIAL": status.innerText = String.fromCodePoint(0x1F535);break;
+        default: status.innerText = ""
+    }
+    
     row.appendChild(status)
 
     return row

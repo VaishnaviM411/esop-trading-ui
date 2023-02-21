@@ -5,6 +5,7 @@
 }
 
 table {
+    width: 100%;
     margin: 1em;
     border-collapse: collapse;
 }
@@ -20,6 +21,11 @@ th {
 
 td, th {
     padding: 1em;
+    text-align: center;
+}
+
+#orderHistory {
+    width: 100%;
 }
 
 
