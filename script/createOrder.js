@@ -24,7 +24,9 @@ async function handleResponse(response) {
     const data = await response.json()
 
     if (response.status == 200) {
-        createOrderCard(data)
+        alert("Order placed successfully!")
+        clearCreateOrderForm()
+        selectEsopType()
     } else {
         errors = data["error"]
         displayErrors(errors)
