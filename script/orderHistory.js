@@ -1,3 +1,4 @@
+let orders
 (async function () {
 
     const queryString = window.location.search;
@@ -17,6 +18,7 @@
 async function handleResponse(response) {
     const data = await response.json()
     if (response.status == 200) {
+        orders = data
         displayHistory(data)
     } else {
         alert("404 not found")
@@ -81,7 +83,7 @@ function showModal(event){
     modalContentEle.appendChild(closeBtn)
 
     const content = document.createElement("div")
-    content.innerText = "some text"
+    content.innerText = JSON.stringify( orders[event.currentTarget.rowIndex-1])
 
     modalContentEle.appendChild(content)
 
