@@ -83,7 +83,7 @@ function showModal(event){
     modalContentEle.appendChild(closeBtn)
 
     const content = document.createElement("div")
-    content.innerText = JSON.stringify( orders[event.currentTarget.rowIndex-1])
+    content.innerText = JSON.stringify( orders[event.currentTarget.rowIndex-1], null, 4)
 
     modalContentEle.appendChild(content)
 
