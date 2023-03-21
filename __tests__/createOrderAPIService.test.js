@@ -1,4 +1,4 @@
-import CreateOrderAPIService from "../src/script/apiService.js"
+import CreateOrderAPIService from "../src/script/createOrderAPIService.js"
 
 
 

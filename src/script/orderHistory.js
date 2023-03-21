@@ -1,18 +1,14 @@
+import OrderHistoryAPIService from "./orderHistoryAPIService.js";
+
 let orders
 (async function () {
-
     const queryString = window.location.search;
 
     const username = new URLSearchParams(queryString).get('username')
 
-    const response = await fetch(`http://localhost:8080/user/${username}/order`, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-    })
+    const orderHistoryAPIService = new OrderHistoryAPIService()
+    const response = await orderHistoryAPIService.orderHistoryAPI(username)
     handleResponse(response)
-
 })()
 
 async function handleResponse(response) {
