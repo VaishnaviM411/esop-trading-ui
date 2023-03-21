@@ -1,0 +1,54 @@
+:root {
+    --border-color: rgb(135, 100, 183);
+    --btn-color: rgb(135, 100, 183);
+    --btn-text-color: white
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 10px;
+    width: 50vw;
+}
+
+option, input {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    padding: 1em;
+}
+
+select {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    padding: 1em;
+}
+
+input[type="submit"] {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+}
+
+label {
+    margin-top: 12px;
+}
+
+#esopTypeDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#submit {
+    margin-top: 10px;
+}
+
+#result {
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+#error{
+    margin: 1em;
+    color: rgb(187, 60, 60);
+}
+

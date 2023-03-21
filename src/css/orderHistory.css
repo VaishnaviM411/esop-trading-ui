@@ -1,0 +1,65 @@
+:root {
+    --table-head-purple: rgb(164, 148, 185);
+    --text-white: white;
+    --tr-hover-purple: rgb(204, 200, 210);
+}
+
+table {
+    width: 100%;
+    margin: 1em;
+    border-collapse: collapse;
+}
+
+tr:hover {
+    background-color: var(--tr-hover-purple);
+}
+
+th {
+    background-color: var(--table-head-purple);
+    color: var(--text-white);
+}
+
+td, th {
+    padding: 1em;
+    text-align: center;
+}
+
+#orderHistory {
+    width: 100%;
+}
+
+
+/* modal */
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 40%;
+    top: 40%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: auto;
+  }
+
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
