@@ -1,4 +1,6 @@
 import OrderHistoryAPIService from "./orderHistoryAPIService.js";
+import "../css/index.css"
+import "../css/orderHistory.css"
 
 let orders
 (async function () {
@@ -50,50 +52,50 @@ function createOrderRow(order) {
     row.appendChild(price)
 
     const esopType = document.createElement("td")
-    esopType.innerText = order["esopType"]=="PERFORMANCE" ? String.fromCodePoint(0x2B50) : ""
+    esopType.innerText = order["esopType"] == "PERFORMANCE" ? String.fromCodePoint(0x2B50) : ""
     row.appendChild(esopType)
 
     const status = document.createElement("td")
-    switch(order["status"]) {
-        case "COMPLETE": status.innerText = String.fromCodePoint(0x2705);break;
-        case "PARTIAL": status.innerText = String.fromCodePoint(0x1F535);break;
+    switch (order["status"]) {
+        case "COMPLETE": status.innerText = String.fromCodePoint(0x2705); break;
+        case "PARTIAL": status.innerText = String.fromCodePoint(0x1F535); break;
         default: status.innerText = ""
     }
-    
+
     row.appendChild(status)
 
     return row
 }
 
 
-function showModal(event){
+function showModal(event) {
     console.log("show modal called");
     const modalEle = document.createElement("div")
     modalEle.setAttribute("class", "modal")
     const modalContentEle = document.createElement("div")
-    modalContentEle.setAttribute("class","modal-content")
+    modalContentEle.setAttribute("class", "modal-content")
     const closeBtn = document.createElement("span")
-    
+
     closeBtn.innerHTML = "&times;"
     closeBtn.setAttribute("class", "close")
     modalContentEle.appendChild(closeBtn)
 
     const content = document.createElement("div")
-    content.innerText = JSON.stringify( orders[event.currentTarget.rowIndex-1], null, 4)
+    content.innerText = JSON.stringify(orders[event.currentTarget.rowIndex - 1], null, 4)
 
     modalContentEle.appendChild(content)
 
     modalEle.appendChild(modalContentEle)
     document.body.appendChild(modalEle)
 
-    closeBtn.onclick = function() {
+    closeBtn.onclick = function () {
         modalEle.style.display = "none";
-      }
-      window.onclick = function(event) {
+    }
+    window.onclick = function (event) {
         if (event.target == modalEle) {
-          modal.style.display = "none";
+            modal.style.display = "none";
         }
-      }
+    }
 }
-  
-  
+
+

@@ -1,4 +1,6 @@
 import { CreateOrder } from "./createOrder.js";
+import "../css/createOrder.css"
+import "../css/index.css"
 
 const form = document.getElementById('createOrder')
 
