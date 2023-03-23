@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1679573827262" clover="3.2.0">
+  <project timestamp="1679573827262" name="All files">
+    <metrics statements="50" coveredstatements="14" conditionals="8" coveredconditionals="1" methods="15" coveredmethods="8" elements="73" coveredelements="23" complexity="0" loc="50" ncloc="50" packages="1" files="3" classes="3"/>
+    <file name="createOrder.js" path="/Users/vaishnaviv/Desktop/esop-trading-ui/src/script/createOrder.js">
+      <metrics statements="42" coveredstatements="6" conditionals="8" coveredconditionals="1" methods="9" coveredmethods="2"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="0" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
+      <line num="42" count="0" type="stmt"/>
+      <line num="43" count="0" type="stmt"/>
+      <line num="44" count="0" type="stmt"/>
+      <line num="45" count="0" type="stmt"/>
+      <line num="46" count="0" type="stmt"/>
+      <line num="47" count="0" type="stmt"/>
+      <line num="49" count="0" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="59" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="60" count="0" type="stmt"/>
+      <line num="63" count="1" type="stmt"/>
+      <line num="68" count="0" type="stmt"/>
+      <line num="69" count="0" type="stmt"/>
+      <line num="70" count="0" type="stmt"/>
+      <line num="71" count="0" type="stmt"/>
+      <line num="73" count="0" type="stmt"/>
+      <line num="82" count="0" type="stmt"/>
+      <line num="83" count="0" type="stmt"/>
+      <line num="84" count="0" type="stmt"/>
+      <line num="85" count="0" type="stmt"/>
+      <line num="89" count="0" type="stmt"/>
+      <line num="90" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="91" count="0" type="stmt"/>
+      <line num="93" count="0" type="stmt"/>
+    </file>
+    <file name="createOrderAPIService.js" path="/Users/vaishnaviv/Desktop/esop-trading-ui/src/script/createOrderAPIService.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+    </file>
+    <file name="orderHistoryAPIService.js" path="/Users/vaishnaviv/Desktop/esop-trading-ui/src/script/orderHistoryAPIService.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>
